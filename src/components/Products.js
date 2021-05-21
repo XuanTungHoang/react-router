@@ -25,9 +25,9 @@ class Products extends Component {
             }
 
         ]
-        var { match } = this.props;
+        var { match, location } = this.props;
         var url = match.url;
-      //  console.log(match);
+        //console.log(location);
         var result = products.map((item, index) =>{
             return (
                 <NavLink to={`${url}/${item.slug}`} key={index}>

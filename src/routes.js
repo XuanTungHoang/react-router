@@ -4,8 +4,14 @@ import About from "./components/About";
 import NotFound from "./components/NotFound";
 import Products from './components/Products';
 import ProductDetail from './components/ProductDetail';
+import Login from './components/Login';
 
 const routes = [
+    {
+        path: '/login',
+        exact: true,
+        component: ({location})=> <Login location={location} />
+    },
     {
         path: '/',
         exact: true,
@@ -19,7 +25,7 @@ const routes = [
     {
         path: '/products',
         exact: true,
-        component: ({match})=> <Products match={match} />
+        component: ({match, location})=> <Products match={match} location={location} />
     },
     {
         path: '/products/:slug',

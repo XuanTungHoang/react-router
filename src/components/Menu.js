@@ -16,6 +16,11 @@ const menus = [
         name: "San pham",
         to: "/products",
         exact: false
+    },
+    {
+        name: "Dang nhap",
+        to: "/login",
+        exact: true
     }
 ]
 
